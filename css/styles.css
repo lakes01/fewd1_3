@@ -1,0 +1,117 @@
+@charset "utf-8";
+/* CSS Document */
+
+body {
+	padding: 0 3%;
+	}
+h1{
+	font-family:Arial, Helvetica, sans-serif;
+	font-size: 1.5rem;
+	font-weight: bold;
+	margin: 1rem 0;
+	}
+p{
+	margin: 0 0 .5rem 0;
+	}
+.anim {
+	border: solid 3px #000;
+	width: 500px;
+	height: 300px;
+	float: left;
+	margin: 0 1rem 1rem 0;
+	background-image: url(../img/room__carpet.jpeg);
+	background-size: auto;
+	overflow: hidden;
+}
+.anim__headline {
+	position: relative;
+	top: -55px;
+	left: 15px;
+	opacity: 0;
+	animation: logo-anim 10s ease-in 2 forwards;
+}
+.anim__room {
+	position: relative;
+	max-width: 125px;
+	max-height: 125px;
+	top: 100px;
+	left: -300px;
+	animation: room-movement 9s linear 2 forwards;
+}
+
+@keyframes logo-anim {
+	0% {
+		top: -300px;
+		left: 10px;
+		opacity: 0;
+	}
+	10% {
+		top: -200px;
+		left: 10px;
+		opacity: 0;
+	}
+	20% {
+		top: -100px;	
+		left: 10px;
+		opacity: 0;
+	}
+	35% {
+		top: -100px;	
+		left: 10px;
+		opacity: 0;
+	}
+	38% {
+		top: -100px;	
+		left: 10px;
+		opacity: 0;
+	}
+	50% {
+		top: -65px;	
+		left: 10px;
+		opacity: 1;
+	}
+	100% {
+		top: -65px;	
+		left: 10px;
+		opacity: 1;
+	}
+}
+@keyframes room-movement {
+	0% {
+		top: -600px;
+		left: 100px;
+		transform: rotate(0deg);
+	}
+	15% { /* done moving down, now rotates*/
+		top: -350px;
+		left: 100px;
+		transform: rotate(0deg);
+	}
+	20% { /* finish rotate, goes right*/
+		top: -350px;
+		left: 100px;
+		transform: rotate(-90deg);
+	}
+	25% {
+		top: -350px;
+		left: 200px;	
+	}
+	30% { /* stop, rotates, goes right*/
+		top: -350px;
+		left: 300px;
+		transform: rotate(-90deg);
+	}
+	35% { /* stop, rotates, goes right*/
+		top: -350px;
+		left: 300px;
+		transform: rotate(0deg);
+	}
+	50% {
+		top: -200px;	
+		left: 300px;
+	}
+	100% {
+		top: 300px;	
+		left: 300px;
+	}
+}
